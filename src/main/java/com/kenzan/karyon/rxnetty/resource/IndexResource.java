@@ -61,7 +61,7 @@ public class IndexResource implements RequestHandler<ByteBuf, ByteBuf>{
                             e.printStackTrace();
                         }
                         //response.writeString("<html><head><style>body{text-align:center;font-family:'Lucida Grande'}</style></head><body><img src='http://kenzan.com/wp-content/themes/kenzan/images/logo-reg.png' /><h2>Example Spinnaker Application</h2><h3>Instance Id " + instanceId + "</h3><h3>$USERDATA ENV VAR: " + userdata + "</h3></body></html>");
-                        response.writeString("<html><head><style>body{text-align:center;font-family:'Lucida Grande'}</style></head><body><img src='https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nclogo_leftright.svg/250px-Nclogo_leftright.svg.png' /><h2>Example Spinnaker Application</h2><h3>Instance Id " + instanceId + "</h3><h3>$USERDATA ENV VAR: " + userdata + "</h3></body></html>");
+                        response.writeString("<html><head><style>body{text-align:center;font-family:'Lucida Grande'}</style></head><body><img src='https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nclogo_leftright.svg/250px-Nclogo_leftright.svg.png' /><h2>Example NC</h2><h3>Instance Id " + instanceId + "</h3><h3>$USERDATA ENV VAR: " + userdata + "</h3></body></html>");
                         return response.close();
                     }
                 });
