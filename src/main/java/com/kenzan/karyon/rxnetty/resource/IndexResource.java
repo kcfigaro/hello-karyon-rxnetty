@@ -53,7 +53,8 @@ public class IndexResource implements RequestHandler<ByteBuf, ByteBuf>{
                         String userdata = "";
 
                         try{
-                            instanceId = execCmd("curl http://metadata/computeMetadata/v1/instance/id -H Metadata-Flavor:Google") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-id");
+                            //instanceId = execCmd("curl http://metadata/computeMetadata/v1/instance/id -H Metadata-Flavor:Google") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-id");
+                            instanceId = execCmd("curl http://169.254.169.254/latest/meta-data/instance-id");
                             userdata = System.getenv("USERDATA");
 
                         } catch (Exception e){
